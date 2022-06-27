@@ -14,7 +14,7 @@ pipeline {
         
         stage('Checking docker images that are currently loaded') {
             steps {
-                ah 'docker images'
+                sh 'docker images'
             }
         }
         stage('last stage') {
