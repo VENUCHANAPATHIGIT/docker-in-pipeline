@@ -1,0 +1,27 @@
+pipeline {
+    agent any
+    stages {
+        stage('Starting stage') {
+            steps {
+                echo 'First stage of the pipeline'
+            }
+        }
+        stage('Checking docker version') {
+            steps {
+                sh 'docker --version'
+            }
+        }
+        
+        stage('Checking docker images that are currently loaded') {
+            steps {
+                ah 'docker images'
+            }
+        }
+        stage('last stage') {
+            steps {
+                echo "last stage of the pipeline"
+             }
+         }
+    }
+}
+
